@@ -1,5 +1,6 @@
 // 将设置放入此文件中以覆盖默认设置
 {
+    "liveServer.settings.port": 9001, //设置本地服务的端口号
     //文字大小
     "editor.fontSize": 18,
     //界面主题
@@ -15,19 +16,18 @@
     //保存时自动格式化
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
-    "prettier.stylelintIntegration": true,
     //自动换行
     "editor.wordWrap": "on",
     //自动保存
     "files.autoSave": "afterDelay",
     //延迟3秒自动
     "files.autoSaveDelay": 3000,
-    "prettier.tabWidth": 4,
-    //"vetur.format.defaultFormatter.html": "prettier",
-    //"prettier.semi": false,
-    //单引号
-    "prettier.singleQuote": true,
     "editor.tabSize": 4,
+    // 强制单引号
+    "prettier.singleQuote": true,
+    // 尾随逗号
+    "prettier.trailingComma": "all",
+    "prettier.tabWidth": 4,
     "eslint.autoFixOnSave": true,
     "files.associations": {
         "*.vue": "vue"
@@ -50,7 +50,16 @@
             ".vue"
         ]
     },
+    // 使用插件格式化 html
     "vetur.format.defaultFormatter.html": "js-beautify-html",
+    // 格式化插件的配置
+    "vetur.format.defaultFormatterOptions": {
+        "js-beautify-html": {
+            // 属性强制折行对齐
+            "wrap_attributes": "force",
+            "indent_size": 4
+        }
+    },
     //排除搜索
     "search.exclude": {
         "**/node_modules": true,
@@ -58,6 +67,4 @@
         "**/dist": true
     },
     "explorer.confirmDelete": false,
-    "liveServer.settings.donotVerifyTags": true,
-    "workbench.startupEditor": "newUntitledFile",
 }
