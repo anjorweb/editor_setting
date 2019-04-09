@@ -1,21 +1,19 @@
-// 将设置放入此文件中以覆盖默认设置
 {
     "liveServer.settings.port": 9001, //设置本地服务的端口号
     //文字大小
     "editor.fontSize": 18,
     //界面主题
-    "workbench.colorTheme": "One Monokai",
+    "workbench.colorTheme": 'One Monokai',
     //图标主题
     "workbench.iconTheme": "vscode-icons",
     "vsicons.dontShowNewVersionMessage": true,
     //live server 不显示信息消息
     "liveServer.settings.donotShowInfoMsg": true,
-    "tslint.autoFixOnSave": true,
     //快速生成标签
     "emmet.triggerExpansionOnTab": true,
     //保存时自动格式化
-    "editor.formatOnSave": true,
-    "editor.formatOnType": true,
+    "editor.formatOnSave": false,
+    "editor.formatOnType": false,
     //自动换行
     "editor.wordWrap": "on",
     //自动保存
